@@ -1,0 +1,92 @@
+{
+    "timestamp": "2025-12-06T10:01:38.999417",
+    "qubits": [
+        "q5"
+    ],
+    "parameters": {
+        "qubits": [
+            "q5"
+        ],
+        "t2_num_averages": 100,
+        "t2_min_wait_ns": 16,
+        "t2_max_wait_ns": 40000,
+        "t2_num_points": 20,
+        "rb_num_sequences": 50,
+        "rb_num_averages": 1,
+        "rb_max_depth": 200,
+        "rb_delta_clifford": 20,
+        "rb_seed": 345324,
+        "dd_idle_short_ns": 400,
+        "dd_idle_long_ns": 4000,
+        "run_t2_measurements": false,
+        "run_scenario_a": true,
+        "run_scenario_b": true,
+        "flux_point": "independent",
+        "reset_type": "active",
+        "use_state_discrimination": true,
+        "simulate": false,
+        "simulation_duration_ns": 10000,
+        "timeout": 100
+    },
+    "RB_baseline": {
+        "label": "Baseline (no idle)",
+        "idle_ns": 0,
+        "use_dd": false,
+        "EPG": {
+            "q5": -4.050762813179176e-07
+        },
+        "EPC": {
+            "q5": -7.595180274710955e-07
+        },
+        "runtime_s": 9.655871152877808
+    },
+    "RB_A_no_dd": {
+        "label": "No DD (400ns)",
+        "idle_ns": 400,
+        "use_dd": false,
+        "EPG": {
+            "q5": 0.0019237015117793928
+        },
+        "EPC": {
+            "q5": 0.0036069403345863615
+        },
+        "runtime_s": 8.685181856155396
+    },
+    "RB_A_xy4": {
+        "label": "XY-4 (400ns)",
+        "idle_ns": 400,
+        "use_dd": true,
+        "EPG": {
+            "q5": -0.006426815242340448
+        },
+        "EPC": {
+            "q5": -0.01205027857938834
+        },
+        "runtime_s": 24.401859045028687
+    },
+    "RB_B_no_dd": {
+        "label": "No DD (4000ns)",
+        "idle_ns": 4000,
+        "use_dd": false,
+        "EPG": {
+            "q5": -6.027315063642883e-07
+        },
+        "EPC": {
+            "q5": -1.1301215744330406e-06
+        },
+        "runtime_s": 7.869050979614258
+    },
+    "RB_B_xy4": {
+        "label": "XY-4 (4000ns)",
+        "idle_ns": 4000,
+        "use_dd": true,
+        "EPG": {
+            "q5": -0.0024434439892076537
+        },
+        "EPC": {
+            "q5": -0.00458145747976435
+        },
+        "runtime_s": 7.79161810874939
+    },
+    "total_runtime_s": 58.97114586830139
+}

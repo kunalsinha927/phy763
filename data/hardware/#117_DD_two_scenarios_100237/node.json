@@ -1,0 +1,177 @@
+{
+    "created_at": "2025-12-06T10:02:37-06:00",
+    "metadata": {
+        "description": "DD Two Scenarios Experiment\nDemonstrates when DD helps vs hurts gate fidelity.\nExpected runtime: 15-25 minutes\n",
+        "run_start": "2025-12-06T10:01:38.840-06:00",
+        "run_end": "2025-12-06T10:02:37.973-06:00",
+        "name": "DD_two_scenarios",
+        "data_path": "2025-12-06/#117_DD_two_scenarios_100237"
+    },
+    "data": {
+        "parameters": {
+            "model": {
+                "qubits": [
+                    "q5"
+                ],
+                "t2_num_averages": 100,
+                "t2_min_wait_ns": 16,
+                "t2_max_wait_ns": 40000,
+                "t2_num_points": 20,
+                "rb_num_sequences": 50,
+                "rb_num_averages": 1,
+                "rb_max_depth": 200,
+                "rb_delta_clifford": 20,
+                "rb_seed": 345324,
+                "dd_idle_short_ns": 400,
+                "dd_idle_long_ns": 4000,
+                "run_t2_measurements": false,
+                "run_scenario_a": true,
+                "run_scenario_b": true,
+                "flux_point": "independent",
+                "reset_type": "active",
+                "use_state_discrimination": true,
+                "simulate": false,
+                "simulation_duration_ns": 10000,
+                "timeout": 100
+            },
+            "schema": {
+                "additionalProperties": false,
+                "properties": {
+                    "qubits": {
+                        "anyOf": [
+                            {
+                                "items": {
+                                    "type": "string"
+                                },
+                                "type": "array"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "default": [
+                            "q5"
+                        ],
+                        "title": "Qubits"
+                    },
+                    "t2_num_averages": {
+                        "default": 100,
+                        "title": "T2 Num Averages",
+                        "type": "integer"
+                    },
+                    "t2_min_wait_ns": {
+                        "default": 16,
+                        "title": "T2 Min Wait Ns",
+                        "type": "integer"
+                    },
+                    "t2_max_wait_ns": {
+                        "default": 40000,
+                        "title": "T2 Max Wait Ns",
+                        "type": "integer"
+                    },
+                    "t2_num_points": {
+                        "default": 20,
+                        "title": "T2 Num Points",
+                        "type": "integer"
+                    },
+                    "rb_num_sequences": {
+                        "default": 50,
+                        "title": "Rb Num Sequences",
+                        "type": "integer"
+                    },
+                    "rb_num_averages": {
+                        "default": 1,
+                        "title": "Rb Num Averages",
+                        "type": "integer"
+                    },
+                    "rb_max_depth": {
+                        "default": 200,
+                        "title": "Rb Max Depth",
+                        "type": "integer"
+                    },
+                    "rb_delta_clifford": {
+                        "default": 20,
+                        "title": "Rb Delta Clifford",
+                        "type": "integer"
+                    },
+                    "rb_seed": {
+                        "default": 345324,
+                        "title": "Rb Seed",
+                        "type": "integer"
+                    },
+                    "dd_idle_short_ns": {
+                        "default": 400,
+                        "title": "Dd Idle Short Ns",
+                        "type": "integer"
+                    },
+                    "dd_idle_long_ns": {
+                        "default": 4000,
+                        "title": "Dd Idle Long Ns",
+                        "type": "integer"
+                    },
+                    "run_t2_measurements": {
+                        "default": false,
+                        "title": "Run T2 Measurements",
+                        "type": "boolean"
+                    },
+                    "run_scenario_a": {
+                        "default": true,
+                        "title": "Run Scenario A",
+                        "type": "boolean"
+                    },
+                    "run_scenario_b": {
+                        "default": true,
+                        "title": "Run Scenario B",
+                        "type": "boolean"
+                    },
+                    "flux_point": {
+                        "default": "independent",
+                        "enum": [
+                            "joint",
+                            "independent"
+                        ],
+                        "title": "Flux Point",
+                        "type": "string"
+                    },
+                    "reset_type": {
+                        "default": "active",
+                        "enum": [
+                            "active",
+                            "thermal"
+                        ],
+                        "title": "Reset Type",
+                        "type": "string"
+                    },
+                    "use_state_discrimination": {
+                        "default": true,
+                        "title": "Use State Discrimination",
+                        "type": "boolean"
+                    },
+                    "simulate": {
+                        "default": false,
+                        "title": "Simulate",
+                        "type": "boolean"
+                    },
+                    "simulation_duration_ns": {
+                        "default": 10000,
+                        "title": "Simulation Duration Ns",
+                        "type": "integer"
+                    },
+                    "timeout": {
+                        "default": 100,
+                        "title": "Timeout",
+                        "type": "integer"
+                    }
+                },
+                "title": "Parameters",
+                "type": "object"
+            }
+        },
+        "outcomes": {},
+        "quam": "./quam_state"
+    },
+    "id": 117,
+    "parents": [
+        116
+    ]
+}
